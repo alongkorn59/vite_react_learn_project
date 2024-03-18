@@ -5,7 +5,10 @@ import SimpleNavigation from './components/Simple/SimpleNavigation';
 function App() {
   return (
     <>
-      <SimpleNavigation />
+      {/* <SimpleNavigation /> */}
+      <h1 className="text-3xl font-bold underline">
+        Hello world!
+      </h1>
     </>
   )
 }
