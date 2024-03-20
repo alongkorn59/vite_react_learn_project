@@ -9,164 +9,98 @@ const NavBar: React.FC = () => {
     return (
         //  <div className="navigation bg-gray shadow-lg py-5">
         // <div className="container flex-1" style={{ outline: '1px solid red' }}>
-        <div className="navbar bg-white py-2 mx-1 my-1 space-x- " style={{ outline: '1px solid red' }}>
-            {/* //? Mobile Mode Display */}
-            {/* <div className="container lg:hidden"> */}
+        <div className="navbar py-2 mx-1 my-1 space-x-3 " style={{ outline: '1px solid red' }}>
             <MobileMode />
-            {/* </div> */}
-            {/* //? PC Mode Display */}
-            {/* <div className="container " style={{ outline: '1px solid red' }}> */}
-            <div className="navbar-start w-auto hidden lg:flex">
-                {ButtonTextIcon(FiMapPin, "PHUKET", "btn btn-neutral rounded-none rounded-l-xl")}
-                {ButtonTextIcon(AiOutlineExpand, "THE MOMENTUM", "btn btn-neutral rounded-none ")}
-                {ButtonTextIcon(AiFillHome, "BUILDING", "btn btn-neutral rounded-none ")}
-                {ButtonTextIcon(AiOutlineLayout, "FLOOR", "btn btn-neutral rounded-none ")}
-                {ButtonTextIcon(AiOutlineCodeSandbox, "APARTMENT", "btn btn-neutral rounded-none rounded-r-xl")}
+            <DesktopMode />
+            <div className="navbar-end flex-1 px-100" style={{ outline: '1px solid red' }}>
+                {ButtonText("PRESENTATION", "btn btn-warning justify-start")}
             </div>
-            <div className="navbar-center w-auto px-2  hidden lg:flex">
-                {ButtonText("EN", "btn btn-neutral rounded-none rounded-l-xl")}
-                {ButtonText("RU", "btn btn-neutral rounded-none rounded-r-xl")}
-            </div>
-            <div className="navbar-end">
-                <a className="btn">Button</a>
-            </div>
-            {/* <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
-                    <li><a>Item 1</a></li>
-                    <li>
-                        <details>
-                            <summary>Parent</summary>
-                            <ul className="p-2">
-                                <li><a>Submenu1</a></li>
-                                <li><a>Submenu2</a></li>
-                            </ul>
-                        </details>
-                    </li>
-                    <li><a>Item 3</a></li>
-                </ul>
-            </div> */}
-            {/* </div> */}
         </div>
         // </div >
     )
 };
-const PCMode: React.FC = () => {
-    return <div className="navbar-start w-auto hidden lg:flex">
-        {ButtonTextIcon(FiMapPin, "PHUKET", "btn btn-neutral rounded-none rounded-l-xl")}
-        {ButtonTextIcon(AiOutlineExpand, "THE MOMENTUM", "btn btn-neutral rounded-none ")}
-        {ButtonTextIcon(AiFillHome, "BUILDING", "btn btn-neutral rounded-none ")}
-        {ButtonTextIcon(AiOutlineLayout, "FLOOR", "btn btn-neutral rounded-none ")}
-        {ButtonTextIcon(AiOutlineCodeSandbox, "APARTMENT", "btn btn-neutral rounded-none rounded-r-xl")}
-    </div>;
-}
+const DesktopMode: React.FC = () => {
+    return (
+        <>
+            <div className="navbar-start  w-auto hidden lg:flex " style={{ outline: '1px solid red' }}>
+
+                {ButtonTextIcon(FiMapPin, "PHUKET", "btn btn-neutral rounded-none rounded-l-xl")}
+                {ButtonTextIcon(AiOutlineExpand, "THE_MOMENTUM", "w-auto btn btn-neutral rounded-none ")}
+                <BuildingDropDawn />
+                {ButtonTextIcon(AiOutlineLayout, "FLOOR", "btn btn-neutral rounded-none", true)}
+                {ButtonTextIcon(AiOutlineCodeSandbox, "APARTMENT", "btn btn-neutral rounded-none rounded-r-xl", true)}
+            </div>
+            <div className="navbar-center hidden lg:flex" style={{ outline: '1px solid red' }}>
+                {ButtonText("EN", "btn btn-neutral rounded-none rounded-l-xl")}
+                {ButtonText("RU", "btn btn-neutral rounded-none rounded-r-xl")}
+            </div>
+            {/* <div role="tablist" className="tabs tabs-bordered">
+                <a role="tab" className="tab w-auto h-auto"> AAA</a>
+                <a role="tab" className="tab tab-active w-auto h-auto">BBB</a>
+                <a role="tab" className="tab w-auto h-auto">CCC</a>
+            </div> */}
+        </>
+
+    );
+};
 
 const MobileMode: React.FC = () => {
-    return <div className="navbar-start lg:hidden">
+    return <div className="navbar-start lg:hidden w-auto" style={{ outline: '1px solid red' }}>
         <div className="dropdown">
-            <div tabIndex={0} role="button" className="">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-            </div>
-            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                <li><a>Item 1</a></li>
-                <li>
-                    <a>Parent</a>
-                    <ul className="p-2">
-                        <li><a>Submenu 1</a></li>
-                        <li><a>Submenu 2</a></li>
-                    </ul>
-                </li>
-                <li><a>Item 3</a></li>
+            {/* <div tabIndex={0} role="button" className="btn m-1">Click</div> */}
+            {ButtonTextIcon(FiMapPin, "PHUKET", "btn btn-neutral ")}
+            <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                <li>{ButtonTextIcon(FiMapPin, "PHUKET", "btn btn-neutral rounded-none rounded-t-xl justify-start", false)}</li>
+                <li>{ButtonTextIcon(FiMapPin, "MOMENTUM", "btn btn-neutral rounded-none justify-start", false)}</li>
+                <li>{ButtonTextIcon(AiFillHome, "BUILDING", "btn btn-neutral rounded-none justify-start", false)}</li>
+                <li>{ButtonTextIcon(AiOutlineLayout, "FLOOR", "btn btn-neutral rounded-none justify-start", false)}</li>
+                <li>{ButtonTextIcon(AiOutlineCodeSandbox, "APARTMENT", "btn btn-neutral rounded-none rounded-b-xl justify-start", false)}</li>
             </ul>
         </div>
     </div>;
 }
 
-function ButtonTextIcon(Icon, text, classStyle) {
-    return (
-        // <div className="container w-auto ">
-        <button className={classStyle}>
-            <Icon />
-            <span>{text}</span>
-        </button >
-        // </div >
-    );
-}
-function ButtonText(text, classStyle) {
-    return (
-        // <div className="container w-auto">
-        <button className={classStyle}>
-            <span>{text}</span>
-        </button >
-        // </div >
-    );
-}
-
-// function createButton(className, text, xmlns) {
+// function ButtonTextIcon(Icon = FiMapPin, text = "", classStyle = "", isDisabled = false) {
+//     const textColor = isDisabled ? 'black' : 'white'; // ถ้า isDisabled เป็น true ให้สีข้อความเป็นดำ ถ้าเป็น false ให้เป็นขาว
 //     return (
-//         <div className="container w-auto">
-//             <button className={className}>
-//                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox={`0 0 ${xmlns.width} ${xmlns.height}`} xmlns={xmlns.value}>
-//                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
-//                 </svg>
-//                 <span>{text}</span>
-//             </button>
-//         </div>
+//         <button className={classStyle} style={{ color: textColor }}>
+//             <Icon />
+//             <span>{text}</span>
+//         </button>
 //     );
 // }
+function ButtonTextIcon(Icon = FiMapPin, text = "", classStyle = "", isDisabled = false) {
+    const textColor = isDisabled ? 'black' : 'white'; // If isDisabled is true, text color is black, otherwise white
+    return (
+        <button className={classStyle} style={{ color: textColor }}>
+            <Icon />
+            <span>{text}</span>
+        </button>
+    );
+}
 
-// const NavBar: React.FC = () => {
-//     return (
-//         //  <div className="navigation bg-gray shadow-lg py-5">
-//         // <div className="container flex-1" style={{ outline: '1px solid red' }}>
-//         <div className="navbar bg-white py-2 mx-1 my-1 " style={{ outline: '1px solid red' }}>
-//             {/* //? Mobile Mode Display */}
-//             {/* <div className="container lg:hidden"> */}
-//             <div className="navbar-start" >
-//                 <div className="dropdown">
-//                     <div tabIndex={0} role="button" className="">
-//                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-//                     </div>
-//                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-//                         <li><a>Item 1</a></li>
-//                         <li>
-//                             <a>Parent</a>
-//                             <ul className="p-2">
-//                                 <li><a>Submenu 1</a></li>
-//                                 <li><a>Submenu 2</a></li>
-//                             </ul>
-//                         </li>
-//                         <li><a>Item 3</a></li>
-//                     </ul>
-//                 </div>
-//                 <a className="btn btn-ghost text-xl">daisyUI</a>
-//             </div>
-//             {/* </div> */}
-//             {/* //? PC Mode Display */}
-//             {/* <div className="container " style={{ outline: '1px solid red' }}> */}
-//             <div className="navbar-start">
-//                 <a className="btn btn-ghost text-xl w-auto">daisyUI</a>
-//             </div>
-//             <div className="navbar-center hidden lg:flex">
-//                 <ul className="menu menu-horizontal px-1">
-//                     <li><a>Item 1</a></li>
-//                     <li>
-//                         <details>
-//                             <summary>Parent</summary>
-//                             <ul className="p-2">
-//                                 <li><a>Submenu1</a></li>
-//                                 <li><a>Submenu2</a></li>
-//                             </ul>
-//                         </details>
-//                     </li>
-//                     <li><a>Item 3</a></li>
-//                 </ul>
-//             </div>
-//             <div className="navbar-end">
-//                 <a className="btn">Button</a>
-//             </div>
-//             {/* </div> */}
-//         </div>
-//         // </div >
-//     )
-// };
+function ButtonText(text = "", classStyle = "") {
+    return (
+        <button className={classStyle}>
+            <span>{text}</span>
+        </button >
+    );
+}
+
+const BuildingDropDawn: React.FC = () => {
+    return <div className="navbar-start  hidden lg:flex">
+        <div className="dropdown">
+            {/* <div tabIndex={0} role="button" className="btn m-1">Click</div> */}
+            {ButtonTextIcon(AiFillHome, "BUILDING", "btn btn-neutral rounded-none justify-start")}
+            <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                <li><a>BUILDING 1</a></li>
+                <li><a>BUILDING 2</a></li>
+                <li><a>BUILDING 3</a></li>
+                <li><a>BUILDING 4</a></li>
+            </ul>
+        </div>
+    </div>;
+}
 export default NavBar
+
+
