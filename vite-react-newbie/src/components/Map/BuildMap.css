@@ -1,0 +1,4 @@
+.building:hover {
+    filter: brightness(200%); /* เปลี่ยนความสว่างของภาพ */
+  }
+  

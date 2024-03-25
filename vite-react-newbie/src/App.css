@@ -2,15 +2,16 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url('/assets/monentum.png');
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-image: url("https://decproduction.ddns.net/Image/React/002.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .main {
@@ -75,9 +76,23 @@ body {
   text-align: center;
 }
 
-.full-screen-background {
+/* .full-screen-background {
   background-image: url("https://decproduction.ddns.net/Image/React/002.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+} */
+
+/* เพิ่มในไฟล์ CSS ของคุณ */
+.NavBar,
+.CardPopup,
+.Body,
+.FooterCard {
+  position: relative;
+  z-index: 1; /* หรือค่าที่เหมาะสมกับลำดับการแสดงผลของคุณ */
+}
+
+.BuildingMap {
+  position: relative;
+  z-index: 0;
 }
