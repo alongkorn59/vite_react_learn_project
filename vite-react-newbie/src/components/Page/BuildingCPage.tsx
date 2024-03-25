@@ -2,12 +2,12 @@ import React from 'react';
 
 function BuildingCPage() {
   return (
-    <div>
-      <h1>หน้า Building A</h1>
-      <p>นี่คือหน้าของอาคาร A</p>
-      {/* เพิ่มเนื้อหาอื่น ๆ ตามต้องการ */}
-    </div>
-  );
+		<div className="absolute -z-10 flex  py-20 w-screen h-screen" style={{ width: '100vw',  display: 'flex', justifyContent: 'center', alignItems: 'center', outline: '1px solid green' }}>
+			<div className="flex justify-center items-center  w-screen">
+				<h1>Building C</h1>
+			</div>
+		</div>
+	);
 }
 
 export default BuildingCPage;

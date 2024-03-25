@@ -84,6 +84,15 @@ function ButtonTextIcon(Icon = FiMapPin, text = "", classStyle = "", isDisabled 
     );
 }
 
+const NavLink: React.FC<{ text: string, to: string, classStyle: string, isDisabled: boolean }> = ({ text, to, classStyle, isDisabled }) => {
+    const textColor = isDisabled ? 'black' : 'white'; // If isDisabled is true, text color is black, otherwise white
+    return (
+        <Link to={to} className={classStyle} style={{ color: textColor }}>
+            <span>{text}</span>
+        </Link>
+    );
+}
+
 function ButtonText(text = "", classStyle = "") {
     return (
         <button className={classStyle}>
@@ -98,10 +107,9 @@ const BuildingDropDawn: React.FC = () => {
             {/* <div tabIndex={0} role="button" className="btn m-1">Click</div> */}
             {ButtonTextIcon(AiFillHome, "BUILDING", "btn btn-neutral rounded-none justify-start")}
             <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                <li><a>BUILDING 1</a></li>
-                <li><a>BUILDING 2</a></li>
-                <li><a>BUILDING 3</a></li>
-                <li><a>BUILDING 4</a></li>
+                <li><NavLink text="BUILDING A" to="/buildingA" classStyle="rounded-none" isDisabled={false} /></li>
+                <li><NavLink text="BUILDING B" to="/buildingB" classStyle="rounded-none" isDisabled={false} /></li>
+                <li><NavLink text="BUILDING C" to="/buildingC" classStyle="rounded-none" isDisabled={false} /></li>
             </ul>
         </div>
     </div>;

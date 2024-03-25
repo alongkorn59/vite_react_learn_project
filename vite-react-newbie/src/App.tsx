@@ -14,6 +14,9 @@ import Home from "./pages";
 // import About from "./pages/about";
 import Apartment from "./pages/blogs";
 import Floor from "./pages/contact";
+import BuildingAPage from './components/Page/BuildingAPage';
+import BuildingBPage from './components/Page/BuildingBPage';
+import BuildingCPage from './components/Page/BuildingCPage';
 
 
 function App() {
@@ -29,6 +32,9 @@ function App() {
         <Route path="/map" element={<BuildingMap />} />
         <Route path="/floor" element={<Floor />} />
         <Route path="/apartment" element={<Apartment />} />
+        <Route path="/buildingA" element={<BuildingAPage />} />
+        <Route path="/buildingB" element={<BuildingBPage />} />
+        <Route path="/buildingC" element={<BuildingCPage />} />
       </Routes>
       <NavBar />
       <CardPopup />
