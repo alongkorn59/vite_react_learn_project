@@ -27,11 +27,11 @@ const DesktopMode: React.FC = () => {
         <>
             <div className="navbar-start  w-auto hidden lg:flex " style={{ outline: '1px solid red' }}>
 
-                <NavLinkIcon icon={FiMapPin} text="PHUKET" to="/home" classStyle="btn btn-neutral rounded-none rounded-l-xl" />
-                <NavLinkIcon icon={AiOutlineExpand} text="LAGUNA PHUKET" to="/map" classStyle="w-auto btn btn-neutral rounded-none " />
+                <NavLinkIcon icon={FiMapPin} text="PHUKET" to="/home" classStyle="btn btn-neutral rounded-none rounded-l-xl" isDisabled={false} />
+                <NavLinkIcon icon={AiOutlineExpand} text="LAGUNA PHUKET" to="/map" classStyle="w-auto btn btn-neutral rounded-none " isDisabled={false} />
                 <BuildingDropDawn />
-                <NavLinkIcon icon={AiOutlineLayout} text="FLOOR" to="/floor" classStyle="btn btn-neutral rounded-none" />
-                <NavLinkIcon icon={AiOutlineCodeSandbox} text="APARTMENT" to="/apartment" classStyle="btn btn-neutral rounded-none rounded-r-xl" />
+                <NavLinkIcon icon={AiOutlineLayout} text="FLOOR" to="/floor" classStyle="btn btn-neutral rounded-none" isDisabled={true} />
+                <NavLinkIcon icon={AiOutlineCodeSandbox} text="APARTMENT" to="/apartment" classStyle="btn btn-neutral rounded-none rounded-r-xl" isDisabled={true} />
             </div>
             <div className="navbar-center hidden lg:flex" style={{ outline: '1px solid red' }}>
                 {ButtonText("EN", "btn btn-neutral rounded-none rounded-l-xl")}
@@ -41,14 +41,7 @@ const DesktopMode: React.FC = () => {
     );
 };
 
-const NavLinkIcon: React.FC<{ icon: React.ElementType, text: string, to: string, classStyle: string }> = ({ icon, text, to, classStyle }) => {
-    return (
-        <Link to={to} className={classStyle}>
-            {React.createElement(icon)}
-            <span>{text}</span>
-        </Link>
-    );
-}
+
 
 // const DesktopMode: React.FC = () => {
 //     return (
@@ -88,6 +81,16 @@ const MobileMode: React.FC = () => {
             </ul>
         </div>
     </div>;
+}
+
+const NavLinkIcon: React.FC<{ icon: React.ElementType, text: string, to: string, classStyle: string, isDisabled: boolean }> = ({ icon, text, to, classStyle, isDisabled }) => {
+    const textColor = isDisabled ? 'black' : 'white'; // If isDisabled is true, text color is black, otherwise white
+    return (
+        <Link to={to} className={classStyle} style={{ color: textColor }}>
+            {React.createElement(icon)}
+            <span>{text}</span>
+        </Link>
+    );
 }
 
 function ButtonTextIcon(Icon = FiMapPin, text = "", classStyle = "", isDisabled = false) {
