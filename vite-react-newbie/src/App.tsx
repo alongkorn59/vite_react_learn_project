@@ -16,6 +16,9 @@ import Floor from "./pages/floor";
 import BuildingAPage from './components/Map/BuildingA';
 import BuildingBPage from './components/Map/BuildingB';
 import BuildingCPage from './components/Map/BuildingC';
+import FloorPlan1 from './components/Floor/FloorPlan1';
+import FloorPlan2 from './components/Floor/FloorPlan2';
+import FloorPlan3 from './components/Floor/FloorPlan3';
 
 
 function App() {
@@ -23,7 +26,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route  path="/home" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/map" element={<BuildingMap />} />
         <Route path="/floor" element={<Floor />} />
         <Route path="/apartment" element={<Apartment />} />
@@ -35,6 +38,10 @@ function App() {
         <Route path="/map/buildingA" element={<BuildingAPage />} />
         <Route path="/map/buildingB" element={<BuildingBPage />} />
         <Route path="/map/buildingC" element={<BuildingCPage />} />
+
+        <Route path="/floor/FloorPlan1" element={<FloorPlan1 />} />
+        <Route path="/floor/FloorPlan2" element={<FloorPlan2 />} />
+        <Route path="/floor/FloorPlan3" element={<FloorPlan3 />} />
       </Routes>
       <NavBar />
       <CardPopup />
