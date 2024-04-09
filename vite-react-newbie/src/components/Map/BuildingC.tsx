@@ -1,11 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import './BuildMap.css';
+import Building from '../../assets/building.jpeg'; // Import the Building image
+
 
 function BuildingC() {
     return (
         <div className='absolute -z-10' style={{ width: '100vw', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', outline: '1px solid green' }}>
-            <img src="https://decproduction.ddns.net/Image/React/building.jpeg" alt="Map" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+            {/* <img src="https://decproduction.ddns.net/Image/React/building.jpeg" alt="Map" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }} /> */}
+            <img src={Building} alt="Map" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
             <Link to={""} className="building" style={{ position: 'absolute', top: '35%', left: '50.0%', transform: 'translate(-50%, -50%) ' }}>
                 <svg width="1250" height="85">
                     <rect id="floor-6" className="highlightC" x="0" y="0" width="1250" height="85" />
