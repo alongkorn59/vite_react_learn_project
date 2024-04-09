@@ -24,19 +24,20 @@ import AFloorPlan4 from './components/Floor/AFloorPlan4';
 import AFloorPlan5 from './components/Floor/AFloorPlan5';
 import AFloorPlan6 from './components/Floor/AFloorPlan6';
 
-// import FloorPlan1 from './components/Floor/FloorPlan1';
-// import FloorPlan2 from './components/Floor/FloorPlan2';
-// import FloorPlan3 from './components/Floor/FloorPlan3';
-// import FloorPlan4 from './components/Floor/FloorPlan4';
-// import FloorPlan5 from './components/Floor/FloorPlan5';
-// import FloorPlan6 from './components/Floor/FloorPlan6';
+import BFloorPlan1 from './components/Floor/AFloorPlan1';
+import BFloorPlan2 from './components/Floor/AFloorPlan2';
+import BFloorPlan3 from './components/Floor/AFloorPlan3';
+import BFloorPlan4 from './components/Floor/AFloorPlan4';
+import BFloorPlan5 from './components/Floor/AFloorPlan5';
+import BFloorPlan6 from './components/Floor/AFloorPlan6';
 
-// import FloorPlan1 from './components/Floor/FloorPlan1';
-// import FloorPlan2 from './components/Floor/FloorPlan2';
-// import FloorPlan3 from './components/Floor/FloorPlan3';
-// import FloorPlan4 from './components/Floor/FloorPlan4';
-// import FloorPlan5 from './components/Floor/FloorPlan5';
-// import FloorPlan6 from './components/Floor/FloorPlan6';
+import CFloorPlan1 from './components/Floor/AFloorPlan1';
+import CFloorPlan2 from './components/Floor/AFloorPlan2';
+import CFloorPlan3 from './components/Floor/AFloorPlan3';
+import CFloorPlan4 from './components/Floor/AFloorPlan4';
+import CFloorPlan5 from './components/Floor/AFloorPlan5';
+import CFloorPlan6 from './components/Floor/AFloorPlan6';
+
 
 import OpenVRIntegration from './components/VR/OpenVRIntegration';
 
@@ -66,33 +67,275 @@ function App() {
         <Route path="/map/buildingA/AFloorPlan5" element={<AFloorPlan5 />} />
         <Route path="/map/buildingA/AFloorPlan6" element={<AFloorPlan6 />} />
 
-        {/* <Route path="/floor/BFloorPlan1" element={<AFloorPlan1 />} />
-        <Route path="/floor/BFloorPlan2" element={<AFloorPlan2 />} />
-        <Route path="/floor/BFloorPlan3" element={<AFloorPlan3 />} />
-        <Route path="/floor/BFloorPlan4" element={<AFloorPlan4 />} />
-        <Route path="/floor/BFloorPlan5" element={<AFloorPlan5 />} />
-        <Route path="/floor/BFloorPlan6" element={<AFloorPlan6 />} />
-        
-        <Route path="/floor/CFloorPlan1" element={<AFloorPlan1 />} />
-        <Route path="/floor/CFloorPlan2" element={<AFloorPlan2 />} />
-        <Route path="/floor/CFloorPlan3" element={<AFloorPlan3 />} />
-        <Route path="/floor/CFloorPlan4" element={<AFloorPlan4 />} />
-        <Route path="/floor/CFloorPlan5" element={<AFloorPlan5 />} />
-        <Route path="/floor/CFloorPlan6" element={<AFloorPlan6 />} /> */}
-        //! Building A
+        <Route path="/map/buildingA/BFloorPlan1" element={<BFloorPlan1 />} /> //TODO
+        <Route path="/map/buildingA/BFloorPlan2" element={<BFloorPlan2 />} /> //TODO
+        <Route path="/map/buildingA/BFloorPlan3" element={<BFloorPlan3 />} /> //TODO
+        <Route path="/map/buildingA/BFloorPlan4" element={<BFloorPlan4 />} /> //TODO
+        <Route path="/map/buildingA/BFloorPlan5" element={<BFloorPlan5 />} /> //TODO
+        <Route path="/map/buildingA/BFloorPlan6" element={<BFloorPlan6 />} /> //TODO
+
+        <Route path="/map/buildingA/CFloorPlan1" element={<CFloorPlan1 />} /> //TODO
+        <Route path="/map/buildingA/CFloorPlan2" element={<CFloorPlan2 />} /> //TODO
+        <Route path="/map/buildingA/CFloorPlan3" element={<CFloorPlan3 />} /> //TODO
+        <Route path="/map/buildingA/CFloorPlan4" element={<CFloorPlan4 />} /> //TODO
+        <Route path="/map/buildingA/CFloorPlan5" element={<CFloorPlan5 />} /> //TODO
+        <Route path="/map/buildingA/CFloorPlan6" element={<CFloorPlan6 />} /> //TODO
+
+
+        //? Building A ------------------------------------------------------------------------------------
+        //! Building A Floor 1
         <Route
-          path="/map/buildingA/AFloorPlan1/OpenVRIntegration/Type2"
+          path="/map/buildingA/AFloorPlan1/Pano/Type1"
           element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type1/" />}
         />
         <Route
-          path="/map/buildingA/AFloorPlan1/OpenVRIntegration/Type1"
+          path="/map/buildingA/AFloorPlan1/Pano/Type2"
           element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type2/" />}
         />
         <Route
-          path="/map/buildingA/AFloorPlan1/OpenVRIntegration/Type1"
+          path="/map/buildingA/AFloorPlan1/Pano/Type3"
           element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type3/" />}
         />
 
+        //! Building A Floor 2
+        <Route
+          path="/map/buildingA/AFloorPlan2/Pano/Type1"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type1/" />}
+        />
+        <Route
+          path="/map/buildingA/AFloorPlan2/Pano/Type2"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type2/" />}
+        />
+        <Route
+          path="/map/buildingA/AFloorPlan2/Pano/Type3"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type3/" />}
+        />
+
+        //! Building A Floor 3
+        <Route
+          path="/map/buildingA/AFloorPlan3/Pano/Type1"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type1/" />}
+        />
+        <Route
+          path="/map/buildingA/AFloorPlan3/Pano/Type2"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type2/" />}
+        />
+        <Route
+          path="/map/buildingA/AFloorPlan3/Pano/Type3"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type3/" />}
+        />
+
+        //! Building A Floor 4
+        <Route
+          path="/map/buildingA/AFloorPlan4/Pano/Type1"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type1/" />}
+        />
+        <Route
+          path="/map/buildingA/AFloorPlan4/Pano/Type2"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type2/" />}
+        />
+        <Route
+          path="/map/buildingA/AFloorPlan4/Pano/Type3"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type3/" />}
+        />
+
+        //! Building A Floor 5
+        <Route
+          path="/map/buildingA/AFloorPlan5/Pano/Type1"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type1/" />}
+        />
+        <Route
+          path="/map/buildingA/AFloorPlan5/Pano/Type2"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type2/" />}
+        />
+        <Route
+          path="/map/buildingA/AFloorPlan5/Pano/Type3"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type3/" />}
+        />
+
+        //! Building A Floor 6
+        <Route
+          path="/map/buildingA/AFloorPlan6/Pano/Type1"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type1/" />}
+        />
+        <Route
+          path="/map/buildingA/AFloorPlan6/Pano/Type2"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type2/" />}
+        />
+        <Route
+          path="/map/buildingA/AFloorPlan6/Pano/Type3"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type3/" />}
+        />
+
+        //? Building B ------------------------------------------------------------------------------------
+        //! Building B Floor 1
+        <Route
+          path="/map/buildingB/BFloorPlan1/Pano/Type1"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type1/" />}
+        />
+        <Route
+          path="/map/buildingB/BFloorPlan1/Pano/Type2"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type2/" />}
+        />
+        <Route
+          path="/map/buildingB/BFloorPlan1/Pano/Type3"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type3/" />}
+        />
+
+        //! Building B Floor 2
+        <Route
+          path="/map/buildingB/BFloorPlan2/Pano/Type1"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type1/" />}
+        />
+        <Route
+          path="/map/buildingB/BFloorPlan2/Pano/Type2"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type2/" />}
+        />
+        <Route
+          path="/map/buildingB/BFloorPlan2/Pano/Type3"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type3/" />}
+        />
+
+        //! Building B Floor 3
+        <Route
+          path="/map/buildingB/BFloorPlan3/Pano/Type1"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type1/" />}
+        />
+        <Route
+          path="/map/buildingB/BFloorPlan3/Pano/Type2"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type2/" />}
+        />
+        <Route
+          path="/map/buildingB/BFloorPlan3/Pano/Type3"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type3/" />}
+        />
+
+        //! Building B Floor 4
+        <Route
+          path="/map/buildingB/BFloorPlan4/Pano/Type1"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type1/" />}
+        />
+        <Route
+          path="/map/buildingB/BFloorPlan4/Pano/Type2"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type2/" />}
+        />
+        <Route
+          path="/map/buildingB/BFloorPlan4/Pano/Type3"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type3/" />}
+        />
+
+        //! Building B Floor 5
+        <Route
+          path="/map/buildingB/BFloorPlan5/Pano/Type1"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type1/" />}
+        />
+        <Route
+          path="/map/buildingB/BFloorPlan5/Pano/Type2"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type2/" />}
+        />
+        <Route
+          path="/map/buildingB/BFloorPlan5/Pano/Type3"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type3/" />}
+        />
+
+        //! Building B Floor 6
+        <Route
+          path="/map/buildingB/BFloorPlan6/Pano/Type1"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type1/" />}
+        />
+        <Route
+          path="/map/buildingB/BFloorPlan6/Pano/Type2"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type2/" />}
+        />
+        <Route
+          path="/map/buildingB/BFloorPlan6/Pano/Type3"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type3/" />}
+        />
+
+        //? Building C ------------------------------------------------------------------------------------
+        //! Building C Floor 1
+        <Route
+          path="/map/buildingC/CFloorPlan1/Pano/Type1"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type1/" />}
+        />
+        <Route
+          path="/map/buildingC/CFloorPlan1/Pano/Type2"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type2/" />}
+        />
+        <Route
+          path="/map/buildingC/CFloorPlan1/Pano/Type3"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type3/" />}
+        />
+
+        //! Building C Floor 2
+        <Route
+          path="/map/buildingC/CFloorPlan2/Pano/Type1"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type1/" />}
+        />
+        <Route
+          path="/map/buildingC/CFloorPlan2/Pano/Type2"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type2/" />}
+        />
+        <Route
+          path="/map/buildingC/CFloorPlan2/Pano/Type3"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type3/" />}
+        />
+
+        //! Building C Floor 3
+        <Route
+          path="/map/buildingC/CFloorPlan3/Pano/Type1"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type1/" />}
+        />
+        <Route
+          path="/map/buildingC/CFloorPlan3/Pano/Type2"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type2/" />}
+        />
+        <Route
+          path="/map/buildingC/CFloorPlan3/Pano/Type3"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type3/" />}
+        />
+
+        //! Building C Floor 4
+        <Route
+          path="/map/buildingC/CFloorPlan4/Pano/Type1"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type1/" />}
+        />
+        <Route
+          path="/map/buildingC/CFloorPlan4/Pano/Type2"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type2/" />}
+        />
+        <Route
+          path="/map/buildingC/CFloorPlan4/Pano/Type3"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type3/" />}
+        />
+
+        //! Building C Floor 5
+        <Route
+          path="/map/buildingC/CFloorPlan5/Pano/Type1"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type1/" />}
+        />
+        <Route
+          path="/map/buildingC/CFloorPlan5/Pano/Type2"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type2/" />}
+        />
+        <Route
+          path="/map/buildingC/CFloorPlan5/Pano/Type3"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type3/" />}
+        />
+
+        //! Building C Floor 6
+        <Route
+          path="/map/buildingC/CFloorPlan6/Pano/Type1"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type1/" />}
+        />
+        <Route
+          path="/map/buildingC/CFloorPlan6/Pano/Type2"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type2/" />}
+        />
+        <Route
+          path="/map/buildingC/CFloorPlan6/Pano/Type3"
+          element={<OpenVRIntegration url="https://decproduction.ddns.net/CrescentBayVillaPhuket/Type3/" />}
+        />
 
       </Routes>
       <NavBar />
