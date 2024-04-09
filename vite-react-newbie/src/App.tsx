@@ -67,19 +67,19 @@ function App() {
         <Route path="/map/buildingA/AFloorPlan5" element={<AFloorPlan5 />} />
         <Route path="/map/buildingA/AFloorPlan6" element={<AFloorPlan6 />} />
 
-        <Route path="/map/buildingA/BFloorPlan1" element={<BFloorPlan1 />} /> //TODO
-        <Route path="/map/buildingA/BFloorPlan2" element={<BFloorPlan2 />} /> //TODO
-        <Route path="/map/buildingA/BFloorPlan3" element={<BFloorPlan3 />} /> //TODO
-        <Route path="/map/buildingA/BFloorPlan4" element={<BFloorPlan4 />} /> //TODO
-        <Route path="/map/buildingA/BFloorPlan5" element={<BFloorPlan5 />} /> //TODO
-        <Route path="/map/buildingA/BFloorPlan6" element={<BFloorPlan6 />} /> //TODO
+        <Route path="/map/buildingB/BFloorPlan1" element={<BFloorPlan1 />} /> 
+        <Route path="/map/buildingB/BFloorPlan2" element={<BFloorPlan2 />} /> 
+        <Route path="/map/buildingB/BFloorPlan3" element={<BFloorPlan3 />} /> 
+        <Route path="/map/buildingB/BFloorPlan4" element={<BFloorPlan4 />} /> 
+        <Route path="/map/buildingB/BFloorPlan5" element={<BFloorPlan5 />} /> 
+        <Route path="/map/buildingB/BFloorPlan6" element={<BFloorPlan6 />} /> 
 
-        <Route path="/map/buildingA/CFloorPlan1" element={<CFloorPlan1 />} /> //TODO
-        <Route path="/map/buildingA/CFloorPlan2" element={<CFloorPlan2 />} /> //TODO
-        <Route path="/map/buildingA/CFloorPlan3" element={<CFloorPlan3 />} /> //TODO
-        <Route path="/map/buildingA/CFloorPlan4" element={<CFloorPlan4 />} /> //TODO
-        <Route path="/map/buildingA/CFloorPlan5" element={<CFloorPlan5 />} /> //TODO
-        <Route path="/map/buildingA/CFloorPlan6" element={<CFloorPlan6 />} /> //TODO
+        <Route path="/map/buildingC/CFloorPlan1" element={<CFloorPlan1 />} /> 
+        <Route path="/map/buildingC/CFloorPlan2" element={<CFloorPlan2 />} /> 
+        <Route path="/map/buildingC/CFloorPlan3" element={<CFloorPlan3 />} /> 
+        <Route path="/map/buildingC/CFloorPlan4" element={<CFloorPlan4 />} /> 
+        <Route path="/map/buildingC/CFloorPlan5" element={<CFloorPlan5 />} /> 
+        <Route path="/map/buildingC/CFloorPlan6" element={<CFloorPlan6 />} /> 
 
 
         //? Building A ------------------------------------------------------------------------------------
